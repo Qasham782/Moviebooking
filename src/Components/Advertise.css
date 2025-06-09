@@ -1,0 +1,83 @@
+.advertise-wrapper {
+  padding: 2rem;
+  background: #121826;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.advertise-heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.movie-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.movie-card {
+  max-width: 320px; /* Optional: ensures cards don’t stretch */
+  max-height: 450px;
+  background: #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+   margin: 0 auto;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.card-info p {
+  margin: 0.3rem 0;
+}
+
+.card-info .desc {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-info span {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #eab308;
+}
+.book-btn {
+  margin-top: 0.5rem;
+  margin-left: 8px;
+  padding: 0.2rem 1rem;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #0097a7;
+}

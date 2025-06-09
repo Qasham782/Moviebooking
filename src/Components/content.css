@@ -1,0 +1,11 @@
+/* Content.css */
+.content {
+  transition: margin-left 0.3s ease;
+  
+}
+
+@media (min-width: 900px) {
+  .content {
+    margin-left: 220px; /* Same as sidebar width */
+  }
+}

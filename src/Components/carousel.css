@@ -1,0 +1,10 @@
+.caro{
+    font-family: "Cinzel", serif;
+}
+.carousel-slider {
+  display: flex;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+}

@@ -1,0 +1,65 @@
+.panels-container {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.panel {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  /* transition: flex 0.4s ease; */
+  position: relative;
+  cursor: pointer;
+}
+
+.panel.hovered {
+  flex: 2;
+}
+
+.panel.shrunk {
+  flex: 0.5;
+}
+
+.panel-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+}
+.theatre{
+    padding: 5em;
+}
+.theatre-title {
+  font-family: "Cinzel", serif;
+  font-size: 2.3rem;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 768px) {
+  .panels-container {
+    flex-direction: column;
+    height: auto;
+  }
+.theatre {
+  padding: 5em 1em;
+}
+  .panel {
+    flex: none;
+    width: 100%;
+    height: 300px;
+  }
+.theatre-title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+  .panel.hovered,
+  .panel.shrunk {
+    flex: none;
+    height: 300px;
+  }
+}

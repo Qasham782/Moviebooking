@@ -1,0 +1,115 @@
+/* Sidebar.css */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 240px;
+    height: 100vh;
+    background: #232946;
+    color: #fff;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+    padding: 32px 20px 20px 20px;
+    transition: left 0.3s cubic-bezier(.4,0,.2,1);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 1.2rem;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    padding: 8px 0;
+    display: block;
+    border-radius: 4px;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+    background: rgb(95, 31, 31);
+    color: white;
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 1100;
+    background: #232946;
+    color: #eebbc3;
+    border: none;
+    font-size: 2rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-toggle:hover,
+.sidebar-toggle:focus {
+    background: #eebbc3;
+    color: #232946;
+}
+
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(35, 41, 70, 0.4);
+    z-index: 1000;
+    cursor: pointer;
+}
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  background-color: #444;
+  color: red;
+}
+
+
+/* Responsive: Hide sidebar toggle on large screens, show sidebar always */
+@media (min-width: 900px) {
+    .sidebar {
+        left: 0;
+        box-shadow: none;
+        width: 220px;
+    }
+    .sidebar-toggle {
+        display: none;
+    }
+    .sidebar-backdrop {
+        display: none;
+    }
+}
